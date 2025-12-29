@@ -1,0 +1,35 @@
+Ai Listing Agent Git Based Rules
+AI Listing Agent – Git-Based Daily Report & Feedback Rules
+Purpose
+
+Automated AI agent that runs daily, finds highly selective home listings matching strict criteria, generates a Markdown report, commits it to the associated git repository, and continuously improves using feedback written directly in the repo.
+
+This document is the single source of truth for agent behavior, scoring, output format, and learning loop.
+
+Daily Schedule
+
+Frequency: Daily
+
+Target Time: 07:30 AM (America/New_York)
+
+Delivery Mechanism: Markdown file committed and pushed to main
+
+Output Directory: reports/
+
+Expected Repo Structure
+.
+├── reports/
+│   └── YYYY-MM-DD.md
+├── feedback/
+│   └── inbox.md
+├── agent/
+│   ├── rules.md | rules.yaml
+│   ├── weights.json
+│   └── state.md | state.json
+└── README.md
+
+Minimum required:
+
+reports/
+
+Either feedback/inbox.md or a feedback section in the most recent report
